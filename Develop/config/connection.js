@@ -13,3 +13,4 @@ const sequelize = process.env.ecommerce_DB_URL
   });
 
 module.exports = sequelize;
+

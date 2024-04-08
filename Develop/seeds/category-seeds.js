@@ -18,6 +18,10 @@ const categoryData = [
   },
 ];
 
-const seedCategories = () => Category.bulkCreate(categoryData);
+
+const seedCategories = async () => {
+  await Category.sync(); // Create the category table if it doesn't exist
+  await Category.bulkCreate(categoryData);
+};
 
 module.exports = seedCategories;
